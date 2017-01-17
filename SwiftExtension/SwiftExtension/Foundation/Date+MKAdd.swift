@@ -3,7 +3,7 @@
 //  SwiftExtension
 //
 //  Created by Mike on 16/10/25.
-//  Copyright © 2016年 Dyhuyu. All rights reserved.
+//  Copyright © 2016年 Galaxy.Inc. All rights reserved.
 //
 
 import Foundation
@@ -13,36 +13,44 @@ extension Date {
     // MARK: - compare
     
     public var isYesterday: Bool {
-        return Calendar.current.dateComponents([.day], from: self, to: Date()).day == 1
+        return Calendar.current.isDateInYesterday(self)
     }
     
     public var isToday: Bool {
-        return isSameDay(Date())
+        return Calendar.current.isDateInToday(self)
+    }
+    
+    public var isTomorrow: Bool {
+        return Calendar.current.isDateInTomorrow(self)
     }
     
     public var isThisWeek: Bool {
-        return isSame([.year, .weekOfYear], Date())
+        return isEqual(granularity: .weekOfYear)
     }
     
     public var isThisMonth: Bool {
-        return isSame([.year, .month], Date())
+        return isEqual(granularity: .month)
     }
     
     public var isThisYear: Bool {
-        return isSame([.year], Date())
+        return isEqual(granularity: .year)
     }
     
-    public func isSameDay(_ otherDate: Date) -> Bool {
-        return isSame([.year, .month, .day], otherDate)
+    public func isSameDay(_ date: Date) -> Bool {
+        return isEqual(date, granularity: .day)
     }
     
-    public func isSame(_ componentSet: Set<Calendar.Component>, _ date: Date) -> Bool {
+    public func isEqual(_ date: Date = Date(), granularity: Calendar.Component) -> Bool {
+        return Calendar.current.isDate(self, equalTo: date, toGranularity: granularity)
+    }
+    
+    public func isEqual(_ date: Date = Date(), componentSet: Set<Calendar.Component>) -> Bool {
         let selfComponents = Calendar.current.dateComponents(componentSet, from: self)
         let otherComponents = Calendar.current.dateComponents(componentSet, from: date)
         for component in componentSet {
             guard let lhs = selfComponents.value(for: component),
                 let rhs = otherComponents.value(for: component) else {
-                return false
+                    return false
             }
             if lhs == rhs {
                 continue
@@ -102,11 +110,11 @@ extension Date {
     public var weekday: Int {
         return component(.weekday)
     }
-
+    
     public var weekdayOrdinal: Int {
         return component(.weekdayOrdinal)
     }
-
+    
     public var quarter: Int {
         return component(.quarter)
     }
@@ -219,7 +227,7 @@ extension Date {
     }
     
     public func secondsInterval(_ date: Date) -> Double {
-//        return interval(.second)
+        //        return interval(.second)
         return timeInterval()
     }
     
