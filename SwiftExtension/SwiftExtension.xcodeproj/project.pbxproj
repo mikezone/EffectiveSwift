@@ -13,6 +13,7 @@
 		27BBE7DB1E2C7C08000B9221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BBE7D91E2C7C08000B9221 /* AppDelegate.swift */; };
 		27BBE7DC1E2C7C08000B9221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BBE7DA1E2C7C08000B9221 /* ViewController.swift */; };
 		27BBE7DE1E2C7CA1000B9221 /* Date+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BBE7DD1E2C7CA1000B9221 /* Date+MKAdd.swift */; };
+		27C8A6A91E2E17DE00F391B0 /* String+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8A6A81E2E17DE00F391B0 /* String+MKAdd.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		27BBE7D91E2C7C08000B9221 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27BBE7DA1E2C7C08000B9221 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27BBE7DD1E2C7CA1000B9221 /* Date+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+MKAdd.swift"; sourceTree = "<group>"; };
+		27C8A6A81E2E17DE00F391B0 /* String+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MKAdd.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				27BBE7DD1E2C7CA1000B9221 /* Date+MKAdd.swift */,
+				27C8A6A81E2E17DE00F391B0 /* String+MKAdd.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C8A6A91E2E17DE00F391B0 /* String+MKAdd.swift in Sources */,
 				27BBE7DC1E2C7C08000B9221 /* ViewController.swift in Sources */,
 				27BBE7DE1E2C7CA1000B9221 /* Date+MKAdd.swift in Sources */,
 				27BBE7DB1E2C7C08000B9221 /* AppDelegate.swift in Sources */,
@@ -319,6 +323,7 @@
 				27BBE7D11E2C7B94000B9221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
