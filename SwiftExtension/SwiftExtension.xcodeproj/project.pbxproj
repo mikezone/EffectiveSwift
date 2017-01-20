@@ -12,8 +12,10 @@
 		27BBE7CB1E2C7B94000B9221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BBE7C91E2C7B94000B9221 /* LaunchScreen.storyboard */; };
 		27BBE7DB1E2C7C08000B9221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BBE7D91E2C7C08000B9221 /* AppDelegate.swift */; };
 		27BBE7DC1E2C7C08000B9221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BBE7DA1E2C7C08000B9221 /* ViewController.swift */; };
-		27BBE7DE1E2C7CA1000B9221 /* Date+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BBE7DD1E2C7CA1000B9221 /* Date+MKAdd.swift */; };
-		27C8A6A91E2E17DE00F391B0 /* String+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8A6A81E2E17DE00F391B0 /* String+MKAdd.swift */; };
+		27E4E8241E31F84000DD1026 /* Data+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E4E8201E31F84000DD1026 /* Data+MKAdd.swift */; };
+		27E4E8251E31F84000DD1026 /* Date+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E4E8211E31F84000DD1026 /* Date+MKAdd.swift */; };
+		27E4E8261E31F84000DD1026 /* String+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E4E8221E31F84000DD1026 /* String+MKAdd.swift */; };
+		27E4E8291E31F8F500DD1026 /* SteerableOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E4E8281E31F8F500DD1026 /* SteerableOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,11 @@
 		27BBE7CC1E2C7B94000B9221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27BBE7D91E2C7C08000B9221 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27BBE7DA1E2C7C08000B9221 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		27BBE7DD1E2C7CA1000B9221 /* Date+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+MKAdd.swift"; sourceTree = "<group>"; };
-		27C8A6A81E2E17DE00F391B0 /* String+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MKAdd.swift"; sourceTree = "<group>"; };
+		27E4E8201E31F84000DD1026 /* Data+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+MKAdd.swift"; sourceTree = "<group>"; };
+		27E4E8211E31F84000DD1026 /* Date+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+MKAdd.swift"; sourceTree = "<group>"; };
+		27E4E8221E31F84000DD1026 /* String+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MKAdd.swift"; sourceTree = "<group>"; };
+		27E4E8281E31F8F500DD1026 /* SteerableOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SteerableOperation.swift; sourceTree = "<group>"; };
+		27E4E82A1E31F98300DD1026 /* SwiftExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftExtension-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +63,8 @@
 		27BBE7BF1E2C7B93000B9221 /* SwiftExtension */ = {
 			isa = PBXGroup;
 			children = (
-				27BBE7D51E2C7BC0000B9221 /* Foundation */,
+				27E4E8271E31F86D00DD1026 /* Classes */,
+				27E4E81E1E31F84000DD1026 /* Extension */,
 				27BBE7D81E2C7C08000B9221 /* AppGenerate */,
 				27BBE7C41E2C7B94000B9221 /* Main.storyboard */,
 				27BBE7C71E2C7B94000B9221 /* Assets.xcassets */,
@@ -68,22 +74,48 @@
 			path = SwiftExtension;
 			sourceTree = "<group>";
 		};
-		27BBE7D51E2C7BC0000B9221 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				27BBE7DD1E2C7CA1000B9221 /* Date+MKAdd.swift */,
-				27C8A6A81E2E17DE00F391B0 /* String+MKAdd.swift */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
 		27BBE7D81E2C7C08000B9221 /* AppGenerate */ = {
 			isa = PBXGroup;
 			children = (
 				27BBE7D91E2C7C08000B9221 /* AppDelegate.swift */,
 				27BBE7DA1E2C7C08000B9221 /* ViewController.swift */,
+				27E4E82A1E31F98300DD1026 /* SwiftExtension-Bridging-Header.h */,
 			);
 			path = AppGenerate;
+			sourceTree = "<group>";
+		};
+		27E4E81E1E31F84000DD1026 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				27E4E81F1E31F84000DD1026 /* Foundation */,
+				27E4E8231E31F84000DD1026 /* UIKit */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		27E4E81F1E31F84000DD1026 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				27E4E8201E31F84000DD1026 /* Data+MKAdd.swift */,
+				27E4E8211E31F84000DD1026 /* Date+MKAdd.swift */,
+				27E4E8221E31F84000DD1026 /* String+MKAdd.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		27E4E8231E31F84000DD1026 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		27E4E8271E31F86D00DD1026 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				27E4E8281E31F8F500DD1026 /* SteerableOperation.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +150,7 @@
 				TargetAttributes = {
 					27BBE7BC1E2C7B93000B9221 = {
 						CreatedOnToolsVersion = 8.2;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -158,9 +191,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C8A6A91E2E17DE00F391B0 /* String+MKAdd.swift in Sources */,
+				27E4E8261E31F84000DD1026 /* String+MKAdd.swift in Sources */,
+				27E4E8291E31F8F500DD1026 /* SteerableOperation.swift in Sources */,
 				27BBE7DC1E2C7C08000B9221 /* ViewController.swift in Sources */,
-				27BBE7DE1E2C7CA1000B9221 /* Date+MKAdd.swift in Sources */,
+				27E4E8251E31F84000DD1026 /* Date+MKAdd.swift in Sources */,
+				27E4E8241E31F84000DD1026 /* Data+MKAdd.swift in Sources */,
 				27BBE7DB1E2C7C08000B9221 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,10 +319,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxy.SwiftExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftExtension/AppGenerate/SwiftExtension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -296,10 +334,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxy.SwiftExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftExtension/AppGenerate/SwiftExtension-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

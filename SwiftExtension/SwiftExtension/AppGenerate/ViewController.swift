@@ -13,10 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var str = "hello"
-        str = nil
-        
-        print(str.intValue())
+        print("在最简单的情况下，一个正则表达式看上去就是一个普通的查找串。例如，正则表达式".md5String)
     }
 }
 
