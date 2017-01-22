@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272F1E301E345C490008638A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1E2F1E345C490008638A /* libz.tbd */; };
+		279420AE1E34DB3100ECE9A7 /* UIColor+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279420AD1E34DB3100ECE9A7 /* UIColor+MKAdd.swift */; };
 		27BBE7C61E2C7B94000B9221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BBE7C41E2C7B94000B9221 /* Main.storyboard */; };
 		27BBE7C81E2C7B94000B9221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BBE7C71E2C7B94000B9221 /* Assets.xcassets */; };
 		27BBE7CB1E2C7B94000B9221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BBE7C91E2C7B94000B9221 /* LaunchScreen.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		272F1E2F1E345C490008638A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		279420AD1E34DB3100ECE9A7 /* UIColor+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MKAdd.swift"; sourceTree = "<group>"; };
 		27BBE7BD1E2C7B93000B9221 /* SwiftExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BBE7C51E2C7B94000B9221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27BBE7C71E2C7B94000B9221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,17 +42,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272F1E301E345C490008638A /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		272F1E2E1E345C490008638A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				272F1E2F1E345C490008638A /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		279420AC1E34DB2000ECE9A7 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				279420AD1E34DB3100ECE9A7 /* UIColor+MKAdd.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		27BBE7B41E2C7B93000B9221 = {
 			isa = PBXGroup;
 			children = (
 				27BBE7BF1E2C7B93000B9221 /* SwiftExtension */,
 				27BBE7BE1E2C7B93000B9221 /* Products */,
+				272F1E2E1E345C490008638A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				27E4E81F1E31F84000DD1026 /* Foundation */,
-				27E4E8231E31F84000DD1026 /* UIKit */,
+				279420AC1E34DB2000ECE9A7 /* UIKit */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -101,13 +123,6 @@
 				27E4E8221E31F84000DD1026 /* String+MKAdd.swift */,
 			);
 			path = Foundation;
-			sourceTree = "<group>";
-		};
-		27E4E8231E31F84000DD1026 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIKit;
 			sourceTree = "<group>";
 		};
 		27E4E8271E31F86D00DD1026 /* Classes */ = {
@@ -150,6 +165,7 @@
 				TargetAttributes = {
 					27BBE7BC1E2C7B93000B9221 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = SYNNFT47HV;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -194,6 +210,7 @@
 				27E4E8261E31F84000DD1026 /* String+MKAdd.swift in Sources */,
 				27E4E8291E31F8F500DD1026 /* SteerableOperation.swift in Sources */,
 				27BBE7DC1E2C7C08000B9221 /* ViewController.swift in Sources */,
+				279420AE1E34DB3100ECE9A7 /* UIColor+MKAdd.swift in Sources */,
 				27E4E8251E31F84000DD1026 /* Date+MKAdd.swift in Sources */,
 				27E4E8241E31F84000DD1026 /* Data+MKAdd.swift in Sources */,
 				27BBE7DB1E2C7C08000B9221 /* AppDelegate.swift in Sources */,
@@ -262,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -306,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -320,7 +337,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = SYNNFT47HV;
 				INFOPLIST_FILE = SwiftExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxy.SwiftExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -335,7 +355,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = SYNNFT47HV;
 				INFOPLIST_FILE = SwiftExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxy.SwiftExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";

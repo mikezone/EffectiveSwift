@@ -13,7 +13,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("在最简单的情况下，一个正则表达式看上去就是一个普通的查找串。例如，正则表达式".md5String)
+        let string = "ℹ↔↕↖↗↘↙↩↪我是🚾🚿🛀🛁🛂🛃🛄🛅"
+        
+        for ch in string.characters.enumerated() {
+            print(ch)
+        }
+        
+        for scalar in string.unicodeScalars.enumerated() {
+            print(scalar)
+            print(scalar.element.value)
+        }
+        
+        self.view.backgroundColor = UIColor(hex: 0x567834)
+        print(self.view.backgroundColor?.alphaHexValue)
+        print(self.view.backgroundColor?.alphaHexString)
     }
 }
 

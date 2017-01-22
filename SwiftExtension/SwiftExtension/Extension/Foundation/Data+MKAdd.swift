@@ -8,28 +8,148 @@
 
 import Foundation
 
+// MARK: - Hash
+
 extension Data {
     
-    public var md5String: String {
-        let messageDigestLength = Int(CC_MD5_DIGEST_LENGTH)
-        let messageDigestResult = UnsafeMutablePointer<UInt8>.allocate(capacity: messageDigestLength)
-        self.withUnsafeBytes { (pointer: UnsafePointer<UInt8>) -> Void in
-            CC_MD5(pointer, UInt32(self.count), messageDigestResult)
-        }
-        messageDigestResult.deinitialize()
-        return String(format: "%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
-                      messageDigestResult[0], messageDigestResult[1], messageDigestResult[2], messageDigestResult[3],
-                      messageDigestResult[4], messageDigestResult[5], messageDigestResult[6], messageDigestResult[7],
-                      messageDigestResult[8], messageDigestResult[9], messageDigestResult[10], messageDigestResult[11],
-                      messageDigestResult[12], messageDigestResult[13], messageDigestResult[14], messageDigestResult[15])
+    public var md2String: String? {
+        return String(data: self, encoding: .utf8)?.md2String
     }
     
-    public var md5Data: Data {
-        let messageDigestLength = Int(CC_MD5_DIGEST_LENGTH)
-        let messageDigestResult = UnsafeMutablePointer<UInt8>.allocate(capacity: messageDigestLength)
-        self.withUnsafeBytes { (pointer: UnsafePointer<UInt8>) -> Void in
-            CC_MD5(pointer, UInt32(self.count), messageDigestResult)
+    public var md4String: String? {
+        return String(data: self, encoding: .utf8)?.md4String
+    }
+    
+    public var md5String: String? {
+        return String(data: self, encoding: .utf8)?.md5String
+    }
+    
+    public var sha1String: String? {
+        return String(data: self, encoding: .utf8)?.sha1String
+    }
+    
+    public var sha224String: String? {
+        return String(data: self, encoding: .utf8)?.sha224String
+    }
+    
+    public var sha256String: String? {
+        return String(data: self, encoding: .utf8)?.sha256String
+    }
+    
+    public var sha384String: String? {
+        return String(data: self, encoding: .utf8)?.sha384String
+    }
+    
+    public var sha512String: String? {
+        return String(data: self, encoding: .utf8)?.sha512String
+    }
+    
+    public func hmacString(_ algorithm: CCHmacAlgorithm, _ key: String) -> String? {
+        return String(data: self, encoding: .utf8)?.hmacString(algorithm, key)
+    }
+    
+    public func hmacMD5String(_ key: String) -> String? {
+        return hmacString(CCHmacAlgorithm(kCCHmacAlgMD5), key)
+    }
+    
+    public func hmacSHA1String(_ key: String) -> String? {
+        return hmacString(CCHmacAlgorithm(kCCHmacAlgSHA1), key)
+    }
+    
+    public func hmacSHA224String(_ key: String) -> String? {
+        return hmacString(CCHmacAlgorithm(kCCHmacAlgSHA224), key)
+    }
+    
+    public func hmacSHA256String(_ key: String) -> String? {
+        return hmacString(CCHmacAlgorithm(kCCHmacAlgSHA256), key)
+    }
+    
+    public func hmacSHA384String(_ key: String) -> String? {
+        return hmacString(CCHmacAlgorithm(kCCHmacAlgSHA384), key)
+    }
+    
+    public func hmacSHA512String(_ key: String) -> String? {
+        return hmacString(CCHmacAlgorithm(kCCHmacAlgSHA512), key)
+    }
+    
+    public var crc32String: String? {
+        guard let crc32Value = self.crc32Value else { return nil }
+        return String(format: "%08x", crc32Value)
+    }
+    
+    public var crc32Value: UInt? {
+        return String(data: self, encoding: .utf8)?.crc32Value
+    }
+    
+}
+
+// MARK: - Encrypt and Decrypt
+
+extension Data {
+    
+    public func aes256Encrypt(_ key: Data, _ iv: Data) -> Data? {
+        if key.count != 16 && key.count != 24 && key.count != 32 {
+            return nil
         }
-        return Data(bytes: messageDigestResult, count: messageDigestLength)
+        
+        if iv.count != 16 && key.count != 0 {
+            return nil
+        }
+        
+        let bufferSize = self.count + kCCBlockSizeAES128
+        let buffer = UnsafeMutablePointer<CChar>.allocate(capacity: bufferSize)
+        var encryptedSize: Int = 0;
+        let cryptStatus = CCCrypt(CCOperation(kCCEncrypt),
+                                  CCAlgorithm(kCCAlgorithmAES128),
+                                  CCOptions(kCCOptionPKCS7Padding),
+                                  String(data: key, encoding: .utf8)?.cString(using: .utf8),
+                                  key.count,
+                                  String(data: iv, encoding: .utf8)?.cString(using: .utf8),
+                                  String(data: self, encoding: .utf8)?.cString(using: .utf8),
+                                  self.count,
+                                  buffer,
+                                  bufferSize,
+                                  &encryptedSize);
+        if cryptStatus == CCCryptorStatus(kCCSuccess) {
+            let result = Data(bytes: buffer, count: encryptedSize)
+            free(buffer);
+            return result;
+        } else {
+            free(buffer);
+            return nil;
+        }
+    }
+    
+    public func aes256Decrypt(_ key: Data, _ iv: Data) -> Data? {
+        if key.count != 16 && key.count != 24 && key.count != 32 {
+            return nil
+        }
+        
+        if iv.count != 16 && key.count != 0 {
+            return nil
+        }
+        
+        let bufferSize = self.count + kCCBlockSizeAES128
+        let buffer = UnsafeMutablePointer<CChar>.allocate(capacity: bufferSize)
+        var encryptedSize: Int = 0;
+        let cryptStatus = CCCrypt(CCOperation(kCCDecrypt),
+                                  CCAlgorithm(kCCAlgorithmAES128),
+                                  CCOptions(kCCOptionPKCS7Padding),
+                                  String(data: key, encoding: .utf8)?.cString(using: .utf8),
+                                  key.count,
+                                  String(data: iv, encoding: .utf8)?.cString(using: .utf8),
+                                  String(data: self, encoding: .utf8)?.cString(using: .utf8),
+                                  self.count,
+                                  buffer,
+                                  bufferSize,
+                                  &encryptedSize);
+        if cryptStatus == CCCryptorStatus(kCCSuccess) {
+            let result = Data(bytes: buffer, count: encryptedSize)
+            free(buffer);
+            return result;
+        } else {
+            free(buffer);
+            return nil;
+        }
     }
 }
