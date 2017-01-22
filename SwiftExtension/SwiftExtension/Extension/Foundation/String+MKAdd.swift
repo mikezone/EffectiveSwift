@@ -348,7 +348,7 @@ extension String {
     
     public func isHTTPURL() -> Bool {
         // "^\[a-zA-z\]+://(\\w+(-\\w+)*)(\\.(\\w+(-\\w+)*))*(\\?\\S*)?$"
-        return entiretyMatchesRegex("http(s)?:\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- .\\/?%&=]*)?")
+        return entiretyMatchesRegex("^http(s)?:\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- .\\/?%&=]*)?$")
     }
 }
 
