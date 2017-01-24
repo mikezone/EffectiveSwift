@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		272F1E301E345C490008638A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1E2F1E345C490008638A /* libz.tbd */; };
+		279420AE1E34DB3100ECE9A7 /* UIColor+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279420AD1E34DB3100ECE9A7 /* UIColor+MKAdd.swift */; };
+		27AAFA071E35942D007BA18C /* Bundle+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA061E35942D007BA18C /* Bundle+MKAdd.swift */; };
+		27AAFA0A1E35948A007BA18C /* Int+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA091E35948A007BA18C /* Int+MKAdd.swift */; };
+		27AAFA0C1E3594BF007BA18C /* NSAttributedString+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA0B1E3594BF007BA18C /* NSAttributedString+MKAdd.swift */; };
+		27AAFA0E1E3594F4007BA18C /* Timer+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA0D1E3594F4007BA18C /* Timer+MKAdd.swift */; };
+		27AAFA101E359503007BA18C /* UIControl+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA0F1E359503007BA18C /* UIControl+MKAdd.swift */; };
+		27AAFA121E35951D007BA18C /* UIGestureRecognizer+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA111E35951D007BA18C /* UIGestureRecognizer+MKAdd.swift */; };
+		27AAFA141E359532007BA18C /* UIImage+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA131E359532007BA18C /* UIImage+MKAdd.swift */; };
+		27AAFA161E35953C007BA18C /* UIDevice+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA151E35953C007BA18C /* UIDevice+MKAdd.swift */; };
+		27AAFA181E359555007BA18C /* UIImageView+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA171E359555007BA18C /* UIImageView+MKAdd.swift */; };
+		27AAFA1A1E359565007BA18C /* UINib+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA191E359565007BA18C /* UINib+MKAdd.swift */; };
+		27AAFA1C1E35957A007BA18C /* UIView+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA1B1E35957A007BA18C /* UIView+MKAdd.swift */; };
+		27AAFA1E1E359585007BA18C /* UIViewController+MKAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAFA1D1E359585007BA18C /* UIViewController+MKAdd.swift */; };
 		27BBE7C61E2C7B94000B9221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BBE7C41E2C7B94000B9221 /* Main.storyboard */; };
 		27BBE7C81E2C7B94000B9221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BBE7C71E2C7B94000B9221 /* Assets.xcassets */; };
 		27BBE7CB1E2C7B94000B9221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BBE7C91E2C7B94000B9221 /* LaunchScreen.storyboard */; };
@@ -21,6 +34,19 @@
 
 /* Begin PBXFileReference section */
 		272F1E2F1E345C490008638A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		279420AD1E34DB3100ECE9A7 /* UIColor+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA061E35942D007BA18C /* Bundle+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA091E35948A007BA18C /* Int+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA0B1E3594BF007BA18C /* NSAttributedString+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA0D1E3594F4007BA18C /* Timer+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Timer+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA0F1E359503007BA18C /* UIControl+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA111E35951D007BA18C /* UIGestureRecognizer+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA131E359532007BA18C /* UIImage+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA151E35953C007BA18C /* UIDevice+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA171E359555007BA18C /* UIImageView+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA191E359565007BA18C /* UINib+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINib+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA1B1E35957A007BA18C /* UIView+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+MKAdd.swift"; sourceTree = "<group>"; };
+		27AAFA1D1E359585007BA18C /* UIViewController+MKAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+MKAdd.swift"; sourceTree = "<group>"; };
 		27BBE7BD1E2C7B93000B9221 /* SwiftExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BBE7C51E2C7B94000B9221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27BBE7C71E2C7B94000B9221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +79,45 @@
 				272F1E2F1E345C490008638A /* libz.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		279420AC1E34DB2000ECE9A7 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				27AAFA0B1E3594BF007BA18C /* NSAttributedString+MKAdd.swift */,
+				279420AD1E34DB3100ECE9A7 /* UIColor+MKAdd.swift */,
+				27AAFA0F1E359503007BA18C /* UIControl+MKAdd.swift */,
+				27AAFA151E35953C007BA18C /* UIDevice+MKAdd.swift */,
+				27AAFA111E35951D007BA18C /* UIGestureRecognizer+MKAdd.swift */,
+				27AAFA131E359532007BA18C /* UIImage+MKAdd.swift */,
+				27AAFA171E359555007BA18C /* UIImageView+MKAdd.swift */,
+				27AAFA191E359565007BA18C /* UINib+MKAdd.swift */,
+				27AAFA1B1E35957A007BA18C /* UIView+MKAdd.swift */,
+				27AAFA1D1E359585007BA18C /* UIViewController+MKAdd.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		27AAFA081E35947B007BA18C /* SwiftStandardLib */ = {
+			isa = PBXGroup;
+			children = (
+				27AAFA091E35948A007BA18C /* Int+MKAdd.swift */,
+			);
+			path = SwiftStandardLib;
+			sourceTree = "<group>";
+		};
+		27AAFA1F1E3596A6007BA18C /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = runtime;
+			sourceTree = "<group>";
+		};
+		27B963A31E36E52300558ABF /* libDispatch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = libDispatch;
 			sourceTree = "<group>";
 		};
 		27BBE7B41E2C7B93000B9221 = {
@@ -99,8 +164,11 @@
 		27E4E81E1E31F84000DD1026 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				27B963A31E36E52300558ABF /* libDispatch */,
+				27AAFA1F1E3596A6007BA18C /* runtime */,
+				27AAFA081E35947B007BA18C /* SwiftStandardLib */,
 				27E4E81F1E31F84000DD1026 /* Foundation */,
-				27E4E8231E31F84000DD1026 /* UIKit */,
+				279420AC1E34DB2000ECE9A7 /* UIKit */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -108,18 +176,13 @@
 		27E4E81F1E31F84000DD1026 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				27AAFA061E35942D007BA18C /* Bundle+MKAdd.swift */,
 				27E4E8201E31F84000DD1026 /* Data+MKAdd.swift */,
 				27E4E8211E31F84000DD1026 /* Date+MKAdd.swift */,
 				27E4E8221E31F84000DD1026 /* String+MKAdd.swift */,
+				27AAFA0D1E3594F4007BA18C /* Timer+MKAdd.swift */,
 			);
 			path = Foundation;
-			sourceTree = "<group>";
-		};
-		27E4E8231E31F84000DD1026 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIKit;
 			sourceTree = "<group>";
 		};
 		27E4E8271E31F86D00DD1026 /* Classes */ = {
@@ -204,10 +267,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AAFA1E1E359585007BA18C /* UIViewController+MKAdd.swift in Sources */,
+				27AAFA1C1E35957A007BA18C /* UIView+MKAdd.swift in Sources */,
 				27E4E8261E31F84000DD1026 /* String+MKAdd.swift in Sources */,
+				27AAFA161E35953C007BA18C /* UIDevice+MKAdd.swift in Sources */,
+				27AAFA141E359532007BA18C /* UIImage+MKAdd.swift in Sources */,
 				27E4E8291E31F8F500DD1026 /* SteerableOperation.swift in Sources */,
 				27BBE7DC1E2C7C08000B9221 /* ViewController.swift in Sources */,
+				27AAFA101E359503007BA18C /* UIControl+MKAdd.swift in Sources */,
+				27AAFA071E35942D007BA18C /* Bundle+MKAdd.swift in Sources */,
+				279420AE1E34DB3100ECE9A7 /* UIColor+MKAdd.swift in Sources */,
+				27AAFA121E35951D007BA18C /* UIGestureRecognizer+MKAdd.swift in Sources */,
+				27AAFA0C1E3594BF007BA18C /* NSAttributedString+MKAdd.swift in Sources */,
+				27AAFA181E359555007BA18C /* UIImageView+MKAdd.swift in Sources */,
 				27E4E8251E31F84000DD1026 /* Date+MKAdd.swift in Sources */,
+				27AAFA1A1E359565007BA18C /* UINib+MKAdd.swift in Sources */,
+				27AAFA0A1E35948A007BA18C /* Int+MKAdd.swift in Sources */,
+				27AAFA0E1E3594F4007BA18C /* Timer+MKAdd.swift in Sources */,
 				27E4E8241E31F84000DD1026 /* Data+MKAdd.swift in Sources */,
 				27BBE7DB1E2C7C08000B9221 /* AppDelegate.swift in Sources */,
 			);

@@ -87,37 +87,69 @@ extension Data {
 
 extension Data {
     
-//    public func aes256Encrypt(_ key: Data, _ iv: Data) -> Data? {
-//        if key.count != 16 && key.count != 24 && key.count != 32 {
-//            return nil
-//        }
-//        
-//        if iv.count != 16 && key.count != 0 {
-//            return nil
-//        }
-//        
-//        var result = Data()
-//        let bufferSize = self.count + kCCBlockSizeAES128
-//        let buffer = UnsafeMutablePointer<CChar>.allocate(capacity: bufferSize)
-//        var encryptedSize: Int = 0;
-//        let cryptStatus = CCCrypt(CCOperation(kCCEncrypt),
-//                                  CCAlgorithm(kCCAlgorithmAES128),
-//                                  CCOptions(kCCOptionPKCS7Padding),
-//                                  String(data: key, encoding: .utf8)?.cString(using: .utf8),
-//                                  key.count,
-//                                  String(data: iv, encoding: .utf8)?.cString(using: .utf8),
-//                                  self.bytes,
-//                                  self.length,
-//                                  buffer,
-//                                  bufferSize,
-//                                  &encryptedSize);
-//        if (cryptStatus == kCCSuccess) {
-//            result = [[NSData alloc]initWithBytes:buffer length:encryptedSize];
-//            free(buffer);
-//            return result;
-//        } else {
-//            free(buffer);
-//            return nil;
-//        }
-//    }
+    public func aes256Encrypt(_ key: Data, _ iv: Data) -> Data? {
+        if key.count != 16 && key.count != 24 && key.count != 32 {
+            return nil
+        }
+        
+        if iv.count != 16 && key.count != 0 {
+            return nil
+        }
+        
+        let bufferSize = self.count + kCCBlockSizeAES128
+        let buffer = UnsafeMutablePointer<CChar>.allocate(capacity: bufferSize)
+        var encryptedSize: Int = 0;
+        let cryptStatus = CCCrypt(CCOperation(kCCEncrypt),
+                                  CCAlgorithm(kCCAlgorithmAES128),
+                                  CCOptions(kCCOptionPKCS7Padding),
+                                  String(data: key, encoding: .utf8)?.cString(using: .utf8),
+                                  key.count,
+                                  String(data: iv, encoding: .utf8)?.cString(using: .utf8),
+                                  String(data: self, encoding: .utf8)?.cString(using: .utf8),
+                                  self.count,
+                                  buffer,
+                                  bufferSize,
+                                  &encryptedSize);
+        if cryptStatus == CCCryptorStatus(kCCSuccess) {
+            let result = Data(bytes: buffer, count: encryptedSize)
+            free(buffer);
+            return result;
+        } else {
+            free(buffer);
+            return nil;
+        }
+    }
+    
+    public func aes256Decrypt(_ key: Data, _ iv: Data) -> Data? {
+        if key.count != 16 && key.count != 24 && key.count != 32 {
+            return nil
+        }
+        
+        if iv.count != 16 && key.count != 0 {
+            return nil
+        }
+        
+        let bufferSize = self.count + kCCBlockSizeAES128
+        let buffer = UnsafeMutablePointer<CChar>.allocate(capacity: bufferSize)
+        var encryptedSize: Int = 0;
+        let cryptStatus = CCCrypt(CCOperation(kCCDecrypt),
+                                  CCAlgorithm(kCCAlgorithmAES128),
+                                  CCOptions(kCCOptionPKCS7Padding),
+                                  String(data: key, encoding: .utf8)?.cString(using: .utf8),
+                                  key.count,
+                                  String(data: iv, encoding: .utf8)?.cString(using: .utf8),
+                                  String(data: self, encoding: .utf8)?.cString(using: .utf8),
+                                  self.count,
+                                  buffer,
+                                  bufferSize,
+                                  &encryptedSize);
+        if cryptStatus == CCCryptorStatus(kCCSuccess) {
+            let result = Data(bytes: buffer, count: encryptedSize)
+            free(buffer);
+            return result;
+        } else {
+            free(buffer);
+            return nil;
+        }
+    }
 }
