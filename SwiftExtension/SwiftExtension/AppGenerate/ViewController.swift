@@ -25,8 +25,11 @@ class ViewController: UIViewController {
         }
         
         self.view.backgroundColor = UIColor(hex: 0x567834)
-        print(self.view.backgroundColor?.alphaHexValue)
-        print(self.view.backgroundColor?.alphaHexString)
+//        print(self.view.backgroundColor?.alphaHexValue)
+//        print(self.view.backgroundColor?.alphaHexString)
+//        Timer(timeInterval: <#T##TimeInterval#>, repeats: <#T##Bool#>, block: <#T##(Timer) -> Void#>)
+//        Timer(fire: <#T##Date#>, interval: <#T##TimeInterval#>, repeats: <#T##Bool#>, block: <#T##(Timer) -> Void#>)
+//        Slice
     }
 }
 
