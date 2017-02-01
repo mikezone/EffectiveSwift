@@ -23,3 +23,7 @@ extension Int {
 extension Int32 {
     
 }
+
+extension Int64 {
+    
+}
