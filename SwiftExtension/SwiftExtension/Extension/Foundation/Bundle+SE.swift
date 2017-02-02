@@ -17,8 +17,8 @@ extension Bundle {
     }
     
     public static func path(forResource name: String?, ofType ext: String?, inBundle bundleName: String) -> String? {
-        //        let bundlePath = Bundle.main.path(forResource: name, ofType: "bundle")
-        //        return Bundle.path(forResource: "firworks.gif", ofType: nil, inDirectory: bundlePath ?? "")
+        // let bundlePath = Bundle.main.path(forResource: bundleName, ofType: "bundle")
+        // return Bundle.path(forResource: name, ofType: nil, inDirectory: bundlePath ?? "")
         return Bundle.bundle(named: bundleName)?.path(forResource: name, ofType: ext)
     }
     

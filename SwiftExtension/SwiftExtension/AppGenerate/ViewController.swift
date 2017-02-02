@@ -53,6 +53,17 @@ class ViewController: UIViewController {
 //        print(ClassInfo(ViewController.self as! AnyClass).propertyInfos)
 //        print(ClassInfo(Date.self as! AnyClass).ivarInfos)
 //        print(ClassInfo(Date.self as! AnyClass).methodInfos)
+        
+        let timer = Timer.timer(timeInterval: 1, repeats: true, closure: { timer in
+            print("hello")
+        })
+        timer.fire()
+        RunLoop.current.add(timer, forMode: .commonModes)
+        
+        
+        _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, closure: { timer in
+            print("world")
+        })
     }
 }
 
