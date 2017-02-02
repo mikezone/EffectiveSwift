@@ -409,37 +409,25 @@ extension String {
     /// String 转换 intValue = int32Value
     /// - returns: Int
     public func int32Value() -> Int32 {
-        if let value = Int32(self) {
-            return value
-        }
-        return Int32(0)
+        return Int32(self) ?? Int32(0)
     }
     
     /// String 转换 intValue
     /// - returns: Int
     public func intValue() -> Int {
-        if let value = Int(self) {
-            return value
-        }
-        return Int(0)
+        return Int(self) ?? Int(0)
     }
     
     /// String 转换 floatValue
     /// - returns: float
     public func floatValue() -> Float {
-        if let value = Float(self) {
-            return value
-        }
-        return Float(0)
+        return Float(self) ?? Float(0)
     }
     
     /// String 转换 doubleValue
     /// - returns: double
     public func doubleValue() -> Double {
-        if let value = Double(self) {
-            return value
-        }
-        return Double(0)
+        return Double(self) ?? Double(0)
     }
 }
 

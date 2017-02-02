@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +33,15 @@ class ViewController: UIViewController {
 //        Slic
         
 //        print(UIApplication.shared.documentsPath)
+        
+//        let a: UInt32 = 0x41424345
+//        print(a.isEqualTo(chars: "ABCE"))
+//        print(a.uInt8Components)
+//        
+//        let b: UInt8 = 0x47
+//        print(b.isEqualTo(char: "G"))
+        let image = #imageLiteral(resourceName: "c").blurDark
+        self.imageView.image = image
     }
 }
 
