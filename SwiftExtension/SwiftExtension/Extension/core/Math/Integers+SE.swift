@@ -29,6 +29,15 @@ extension UInt8 {
     public func isEqualTo(ascii: UnicodeScalar) -> Bool {
         return (self & 0xFF) == UInt8(ascii: ascii)
     }
+    
+    public var charString: String {
+        let pointer = UnsafeMutablePointer<UInt8>.allocate(capacity: 1)
+        let value = self
+        pointer.pointee = value
+        let string = String(cString: pointer)
+        free(pointer)
+        return string
+    }
 }
 
 extension UInt32 {

@@ -40,8 +40,19 @@ class ViewController: UIViewController {
 //        
 //        let b: UInt8 = 0x47
 //        print(b.isEqualTo(char: "G"))
-        let image = #imageLiteral(resourceName: "c").blurDark
-        self.imageView.image = image
+        
+//        let image = #imageLiteral(resourceName: "c").blurDark
+//        self.imageView.image = image
+//        print(UInt8.max)
+        
+//        let a = ClassIvarInfo()
+//        print(a)
+        print(UInt8(65).charString)
+        
+        // bug
+//        print(ClassInfo(ViewController.self as! AnyClass).propertyInfos)
+//        print(ClassInfo(Date.self as! AnyClass).ivarInfos)
+//        print(ClassInfo(Date.self as! AnyClass).methodInfos)
     }
 }
 
