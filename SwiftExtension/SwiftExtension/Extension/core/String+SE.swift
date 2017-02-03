@@ -515,8 +515,8 @@ public extension String {
         if let dict = anyJson as? [String:Any] {
             return dict.description
         }
-        if anyJson is [Any] {
-            return (anyJson as! [Any]).description
+        if let array = anyJson as? [Any] {
+            return array.description
         }
         return anyJson as! String
     }

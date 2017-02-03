@@ -18,6 +18,14 @@ public extension Int {
         return self % 2 == 1
     }
     
+    /// pass 1..<4 will retrun 1 or 2 or 3
+    public func random(range: CountableRange<UInt32>) -> Int? {
+        let lower = range.lowerBound
+        let upper = range.upperBound
+        if lower < UInt32.min || upper > UInt32.max { return nil }
+        let gap = upper - lower
+        return Int(arc4random_uniform(gap) + lower)
+    }
 }
 
 public extension UInt8 {
