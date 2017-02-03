@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension UnsafePointer {
+public extension UnsafePointer {
 
 }
 
-extension UnsafeMutablePointer {
+public extension UnsafeMutablePointer {
     
 }

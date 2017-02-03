@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension DispatchQueue {
+public extension DispatchQueue {
     
     public var isMainQueue: Bool {
         return pthread_main_np() != 0

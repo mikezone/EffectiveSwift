@@ -8,6 +8,6 @@
 
 import Foundation
 
-extension ManagedBuffer {
+public extension ManagedBuffer {
     
 }

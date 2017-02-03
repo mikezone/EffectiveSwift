@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UINib {
+public extension UINib {
     class func loadNibFirstView(name: String, owner: Any?) -> UIView? {
         // let nib = UINib(nibName: name, bundle: Bundle.main)
         // let array = nib.instantiate(withOwner: owner, options: nil)

@@ -10,6 +10,6 @@ import Foundation
 
 // CustomReflectable
 // CustomLeafReflectable
-extension Mirror {
+public extension Mirror {
     
 }

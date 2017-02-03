@@ -8,6 +8,6 @@
 
 import Foundation
 
-extension Range {
+public extension Range {
     
 }

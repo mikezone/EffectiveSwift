@@ -8,6 +8,6 @@
 
 import Foundation
 
-extension Dictionary {
+public extension Dictionary {
     
 }

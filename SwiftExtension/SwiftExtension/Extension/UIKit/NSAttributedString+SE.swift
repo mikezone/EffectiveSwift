@@ -8,12 +8,12 @@
 
 import UIKit
 
-extension NSAttributedString {
+public extension NSAttributedString {
     
 }
 
 /// MARK: - Set character attribute as property
-extension NSMutableAttributedString {
+public extension NSMutableAttributedString {
     public var rangeOfAll: NSRange {
         return NSRange(location: 0, length: self.length)
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Bundle {
+public extension Bundle {
     public static func bundle(named: String) -> Bundle? {
         guard let bundlePath = Bundle.main.path(forResource: named, ofType: "bundle") else {
             return nil

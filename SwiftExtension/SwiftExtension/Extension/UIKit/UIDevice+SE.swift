@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIDevice {
+public extension UIDevice {
     
     public var isSimulator: Bool {
         return machineModel == "x86_64" || machineModel == "i386"

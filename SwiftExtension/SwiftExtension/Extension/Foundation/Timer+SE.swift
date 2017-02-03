@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Timer {
+public extension Timer {
     
     public class func _execBlock(timer: Timer) {
         if let closure = timer.userInfo as? ((_ timer: Timer) -> Swift.Void) {

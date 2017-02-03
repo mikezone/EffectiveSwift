@@ -8,6 +8,6 @@
 
 import Foundation
 
-extension Array {
+public extension Array {
     
 }

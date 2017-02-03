@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     public convenience init?(hexString: String) {
         var rgbString = hexString
         // String should be 6 or 7 characters if it includes '#'
@@ -67,7 +67,7 @@ extension UIColor {
 }
 
 // MARK: - get property
-extension UIColor {
+public extension UIColor {
     public var alpha: CGFloat {
         return self.cgColor.alpha
     }

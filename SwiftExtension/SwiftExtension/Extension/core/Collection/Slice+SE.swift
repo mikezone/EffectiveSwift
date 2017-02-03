@@ -8,6 +8,6 @@
 
 import Foundation
 
-extension Slice {
+public extension Slice {
     
 }

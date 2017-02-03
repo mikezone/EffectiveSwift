@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Hash
 
-extension Data {
+public extension Data {
     
     public var md2String: String? {
         return String(data: self, encoding: .utf8)?.md2String
@@ -85,7 +85,7 @@ extension Data {
 
 // MARK: - Encrypt and Decrypt
 
-extension Data {
+public extension Data {
     
     public func aes256Encrypt(_ key: Data, _ iv: Data) -> Data? {
         if key.count != 16 && key.count != 24 && key.count != 32 {

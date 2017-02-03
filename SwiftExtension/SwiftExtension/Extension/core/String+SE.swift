@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - Hash
 
-extension String {
+public extension String {
     
     public var bytes: [CChar]? {
         return self.cString(using: .utf8)
@@ -207,7 +207,7 @@ extension String {
 
 // MARK: - Encode and decode / escape
 
-extension String {
+public extension String {
     
     public var base64EncodedString: String? {
         return self.data(using: .utf8)?.base64EncodedString()
@@ -255,7 +255,7 @@ extension String {
 
 // MARK: - Drawing (UI calculate)
 
-extension String {
+public extension String {
     
     /// NSString 计算字体size
     /// - parameter font:              字体大小
@@ -279,7 +279,7 @@ extension String {
 
 // MARK: - pattern match(Regular Expression)
 
-extension String {
+public extension String {
     
     public func matchesRegex(_ pattern: String, _ options: NSRegularExpression.Options = .caseInsensitive, _ enumerateClosure:((_ matchString: String, _ matchRange: NSRange, _ stop: UnsafeMutablePointer<ObjCBool>) -> Swift.Void)? = nil) -> Bool {
         do {
@@ -361,7 +361,7 @@ extension String {
 
 // MARK: - Emoji 
 
-extension String {
+public extension String {
     
     public func containsEmoji(_ systemVersion: String = UIDevice.current.systemVersion) -> Bool {
         let minSetOld = NSMutableCharacterSet()
@@ -400,7 +400,7 @@ extension String {
 
 // MARK: - type cast
 
-extension String {
+public extension String {
     
     public func charValue() -> Character {
         return Character(self)
@@ -433,7 +433,7 @@ extension String {
 
 // MARK: - Dividing Strings
 
-extension String {
+public extension String {
     
     public func substring(_ range: CountableRange<Int>) -> String {
         let startIndex = self.index(self.startIndex, offsetBy: range.startIndex)
@@ -457,7 +457,7 @@ extension String {
 
 // MARK: - tools
 
-extension String {
+public extension String {
     
     public func compareVersion(_ rhs: String) -> ComparisonResult {
         var lhsComponents = self.components(separatedBy: ".")

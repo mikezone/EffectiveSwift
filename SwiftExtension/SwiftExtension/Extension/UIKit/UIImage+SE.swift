@@ -14,7 +14,7 @@ public func degreesToRadians(_ degrees: CGFloat) -> CGFloat {
     return degrees * CGFloat(M_PI) / 180.0;
 }
 
-extension UIImage {
+public extension UIImage {
     public class func animatedImage(gifData: Data, scale: CGFloat = 2.0) -> UIImage? {
         guard let imageSource = CGImageSourceCreateWithData(gifData as CFData, nil)
             else { return nil }
@@ -81,7 +81,7 @@ extension UIImage {
 }
 
 // MARK: - Modify Image
-extension UIImage {
+public extension UIImage {
     public func draw(in: CGRect, contentMode: UIViewContentMode, clipToBounds: Bool) {
         let drawRect = CGRect.renderRect(canvas: `in`, renderSize: self.size, mode: contentMode)
         if drawRect.size.width == 0 || drawRect.size.height == 0 { return }
@@ -256,7 +256,7 @@ extension UIImage {
 }
 
 // MARK: - Image Effect
-extension UIImage {
+public extension UIImage {
     public func tinting(color: UIColor) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
         let rect = CGRect(origin: .zero, size: self.size)
@@ -464,7 +464,7 @@ extension UIImage {
     
 }
 
-extension CGImageSource {
+public extension CGImageSource {
     public func frameDurationAtIndex(_ index: Int) -> TimeInterval {
         let cfFrameProperties = CGImageSourceCopyPropertiesAtIndex(self, index, nil)
         
@@ -492,7 +492,7 @@ extension CGImageSource {
     }
 }
 
-extension CGRect {
+public extension CGRect {
     public static func renderRect(canvas: CGRect, renderSize: CGSize, mode: UIViewContentMode) -> CGRect {
         var rect = canvas.standardized
         var size = CGSize.zero
@@ -561,7 +561,7 @@ extension CGRect {
     }
 }
 
-extension Data {
+public extension Data {
     public var isAnimatedGIF: Bool {
         if self.count < 16 { return false }
         let pointer = UnsafeMutablePointer<UInt8>.allocate(capacity: 4)

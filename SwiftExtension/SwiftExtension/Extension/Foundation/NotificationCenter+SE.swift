@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NotificationCenter {
+public extension NotificationCenter {
     
     
     /// Posts a given notification to the receiver on main thread.

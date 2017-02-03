@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIApplication {
+public extension UIApplication {
 
     public var documentsURL: URL? {
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last

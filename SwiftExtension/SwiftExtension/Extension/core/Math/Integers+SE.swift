@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Int {
+public extension Int {
     
     public var isEven: Bool {
         return self % 2 == 0
@@ -20,7 +20,7 @@ extension Int {
     
 }
 
-extension UInt8 {
+public extension UInt8 {
     public func isEqualTo(char: String) -> Bool {
         guard let scalar = char.unicodeScalars.first else { return false}
         return isEqualTo(ascii: scalar)
@@ -40,7 +40,7 @@ extension UInt8 {
     }
 }
 
-extension UInt32 {
+public extension UInt32 {
     public var uInt8Components: [UInt8] {
         var array = [UInt8](repeating: 0, count: 4)
         array[0] = UInt8((self >> 24) & 0xFF)
@@ -63,6 +63,6 @@ extension UInt32 {
     }
 }
 
-extension UInt64 {
+public extension UInt64 {
     
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: -
-extension UIView {
+public extension UIView {
     
     /// Create a snapshot image of the complete view hierarchy.
     public var snapshotImage: UIImage? {
@@ -31,7 +31,7 @@ extension UIView {
 }
 
 // MARK: - AjustFrame
-extension UIView {
+public extension UIView {
     var x: CGFloat {
         set {
             var frame = self.frame
