@@ -30,7 +30,6 @@ extension UIView {
     }
 }
 
-
 // MARK: - AjustFrame
 extension UIView {
     var x: CGFloat {
