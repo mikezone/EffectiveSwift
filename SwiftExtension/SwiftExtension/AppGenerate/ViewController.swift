@@ -64,6 +64,24 @@ class ViewController: UIViewController {
 //        _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, closure: { timer in
 //            print("world")
 //        })
+        
+        do {
+//            let json = "{\"name\":\"zhangsan\", \"age\":12}"
+//            let json = "{\"name\":\"zhangsan\", \"age\":12.0}"
+//            let json = "{\"name\":\"zhangsan\", \"age\":{\"name\":\"zhangsan\", \"age\":12.0}}"
+//            let json = "{\"name\":\"zhangsan\", \"age\":[10, 8, 7]}"
+            let json = "{\"name\":\"zhangsan\", \"age\":\"hah\"}"
+            let obj = try JSONSerialization.jsonObject(with: json.data(using: .utf8)!, options: .mutableContainers)
+            print(obj)
+            let dict = obj as! [String:Any]
+            print(dict)
+            print(dict["name"] as! String) // zhangsan
+//            print(dict["age"] as! String) //Could not cast value of type '__NSCFNumber' (0x109f1e3c0) to 'NSString' (0x109522ad8)
+            print(dict["age"] as? String) // nil
+//            print(dict["age"] as! Int) // 12
+            print(String.fromAnyJSONObject(dict["age"]))
+        } catch {
+            
+        }
     }
 }
-

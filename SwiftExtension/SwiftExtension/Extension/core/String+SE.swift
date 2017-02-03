@@ -505,4 +505,20 @@ public extension String {
         return false
     }
     
+    public static func fromAnyJSONObject(_ anyJson: Any?) -> String {
+        guard let anyJson = anyJson else {
+            return ""
+        }
+        if let number = anyJson as? NSNumber {
+            return number.stringValue
+        }
+        if let dict = anyJson as? [String:Any] {
+            return dict.description
+        }
+        if anyJson is [Any] {
+            return (anyJson as! [Any]).description
+        }
+        return anyJson as! String
+    }
+    
 }
