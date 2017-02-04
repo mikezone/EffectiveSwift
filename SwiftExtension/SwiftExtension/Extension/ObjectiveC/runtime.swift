@@ -72,7 +72,6 @@ public class ClassInfo {
     public private(set) var methodInfos: [String : ClassMethodInfo]! ///< key: method name
     public private(set) var propertyInfos: [String : ClassPropertyInfo]! ///< key: property name
     
-    
     private var needUpdate: Bool = false
     private init() {}
     
