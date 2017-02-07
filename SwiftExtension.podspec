@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SwiftExtension"
-  s.version      = "0.9.5"
+  s.version      = "0.9.6"
   s.summary      = "some useful extension for Swift"
   s.homepage     = "https://github.com/mikezone/SwiftExtension"
   s.license      = "GNU"
