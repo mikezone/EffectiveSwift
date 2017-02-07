@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
   s.name         = "SwiftExtension"
-  s.version      = "0.9.6"
+  s.version      = "0.9.7"
   s.summary      = "some useful extension for Swift"
   s.homepage     = "https://github.com/mikezone/SwiftExtension"
   s.license      = "GNU"
   s.author       = { "Mike" => "82643885@qq.com" }
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/mikezone/SwiftExtension.git", :tag => s.version }
-  s.source_files  = ["SwiftExtension/SwiftExtension/Classes/*.swift", "SwiftExtension/SwiftExtension/Extension/**/*.swift", "SwiftExtension/SwiftExtension/SwiftExtension.h"]
-  s.public_header_files = ["SwiftExtension/SwiftExtension/SwiftExtension.h"]
+  s.source_files  = ["SwiftExtension/Classes/*.swift", "SwiftExtension/Extension/**/*.swift", "SwiftExtension/SwiftExtension.h"]
+  s.public_header_files = ["SwiftExtension/SwiftExtension.h"]
   s.frameworks = "Foundation", "UIKit", "CoreGraphics"
   s.libraries = "z"
   s.requires_arc = true
