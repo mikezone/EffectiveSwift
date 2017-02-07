@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 //! Project version number for Kingfisher.
-FOUNDATION_EXPORT double SwiftExtensionVersionNumber;
+FOUNDATION_EXPORT double EffectiveSwiftVersionNumber;
 
 //! Project version string for Kingfisher.
-FOUNDATION_EXPORT const unsigned char SwiftExtensionVersionString[];
+FOUNDATION_EXPORT const unsigned char EffectiveSwiftVersionString[];

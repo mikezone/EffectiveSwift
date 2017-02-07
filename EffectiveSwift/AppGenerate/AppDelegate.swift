@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SwiftExtension
+//  EffectiveSwift
 //
-//  Created by Mike on 17/1/16.
+//  Created by Mike on 17/2/7.
 //  Copyright © 2017年 Mike. All rights reserved.
 //
 
