@@ -9,11 +9,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/mikezone/SwiftExtension.git", :tag => s.version }
   s.source_files  = ["SwiftExtension/SwiftExtension/Classes/*.swift", "SwiftExtension/SwiftExtension/Extension/**/*.swift", "SwiftExtension/SwiftExtension/SwiftExtension.h"]
   s.public_header_files = ["SwiftExtension/SwiftExtension/SwiftExtension.h"]
-  s.prefix_header_contents = ["#import <CommonCrypto/CommonCrypto.h>", "#import <zlib.h>", "#import <sys/sysctl.h>"]
   s.frameworks = "Foundation", "UIKit", "CoreGraphics"
   s.libraries = "z"
   s.requires_arc = true
-  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include" }
+  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include" }
   # s.dependency "JSONKit", "~> 1.4"
   s.pod_target_xcconfig = { 
     'SWIFT_VERSION' => '3.0',
