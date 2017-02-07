@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SwiftExtension"
-  s.version      = "0.9.4"
+  s.version      = "0.9.5"
   s.summary      = "some useful extension for Swift"
   s.homepage     = "https://github.com/mikezone/SwiftExtension"
   s.license      = "GNU"
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.frameworks = "Foundation", "UIKit", "CoreGraphics"
   s.libraries = "z"
   s.requires_arc = true
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include" }
   # s.dependency "JSONKit", "~> 1.4"
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 end
