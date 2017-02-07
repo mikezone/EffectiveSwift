@@ -488,8 +488,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxy.SwiftExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/SwiftExtension/modulemapFiles/iphoneos";
-				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/SwiftExtension/modulemapFiles/iphonesimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/modulemapFiles/iphoneos";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/modulemapFiles/iphonesimulator";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftExtension/AppGenerate/SwiftExtension-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -510,8 +510,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxy.SwiftExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/SwiftExtension/modulemapFiles/iphoneos";
-				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/SwiftExtension/modulemapFiles/iphonesimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/modulemapFiles/iphoneos";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/modulemapFiles/iphonesimulator";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftExtension/AppGenerate/SwiftExtension-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
