@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import CommonCrypto
+import zlib
 
 // MARK: - Hash
 
