@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SwiftExtension"
-  s.version      = "0.9.7"
+  s.version      = "0.9.8"
   s.summary      = "some useful extension for Swift"
   s.homepage     = "https://github.com/mikezone/SwiftExtension"
   s.license      = "GNU"
@@ -13,10 +13,9 @@ Pod::Spec.new do |s|
   s.libraries = "z"
   s.requires_arc = true
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include" }
-  # s.dependency "JSONKit", "~> 1.4"
   s.pod_target_xcconfig = { 
     'SWIFT_VERSION' => '3.0',
-    'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]' => '$(SRCROOT)/SwiftExtension/modulemapFiles/iphoneos',
-    'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]' => '$(SRCROOT)/SwiftExtension/modulemapFiles/iphonesimulator'
+    'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]' => '$(SRCROOT)/SwiftExtension/SwiftExtension/modulemapFiles/iphoneos',
+    'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]' => '$(SRCROOT)/SwiftExtension/SwiftExtension/modulemapFiles/iphonesimulator'
   }
 end
