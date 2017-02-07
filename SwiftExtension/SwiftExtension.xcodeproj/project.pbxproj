@@ -56,6 +56,7 @@
 		2755ED461E3F4936001B6BFC /* Pointer+SE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pointer+SE.swift"; sourceTree = "<group>"; };
 		2755ED481E3F4AEF001B6BFC /* Reflection+SE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reflection+SE.swift"; sourceTree = "<group>"; };
 		275C4B7F1E3AE808001D862B /* Range+SE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+SE.swift"; sourceTree = "<group>"; };
+		278CB4811E49B00A00BB9B86 /* SwiftExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftExtension.h; sourceTree = "<group>"; };
 		279420AD1E34DB3100ECE9A7 /* UIColor+SE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SE.swift"; sourceTree = "<group>"; };
 		27AA6F9C1E4333CB00F32AEB /* NotificationCenter+SE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+SE.swift"; sourceTree = "<group>"; };
 		27AA6FA01E435EF400F32AEB /* Slice+SE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Slice+SE.swift"; sourceTree = "<group>"; };
@@ -214,6 +215,7 @@
 				27BBE7C71E2C7B94000B9221 /* Assets.xcassets */,
 				27BBE7C91E2C7B94000B9221 /* LaunchScreen.storyboard */,
 				27BBE7CC1E2C7B94000B9221 /* Info.plist */,
+				278CB4811E49B00A00BB9B86 /* SwiftExtension.h */,
 			);
 			path = SwiftExtension;
 			sourceTree = "<group>";
