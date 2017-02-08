@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "EffectiveSwift"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "Some useful extension for Swift"
   s.homepage     = "https://github.com/mikezone/EffectiveSwift"
-  s.license      = "GNU"
+  s.license      = "GPL-3.0"
   s.author       = { "Mike" => "82643885@qq.com" }
 
   s.platform     = :ios, "8.0"
@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.frameworks = "Foundation", "UIKit", "CoreGraphics"
   s.requires_arc = true
 
-  s.source_files  = ["EffectiveSwift/Classes/*.swift", "EffectiveSwift/Extension/**/*.swift", "EffectiveSwift/EffectiveSwift.h"]
-  s.public_header_files = ["EffectiveSwift/EffectiveSwift.h"]
+  s.source_files  = ["EffectiveSwift/Classes/*.swift", "EffectiveSwift/Extension/**/*.swift"]
+  # s.public_header_files = ["EffectiveSwift/EffectiveSwift.h"]
   s.preserve_paths = 'modulemapFiles/**/*'
   s.libraries = "z"
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include" }

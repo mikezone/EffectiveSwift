@@ -79,7 +79,6 @@
 		278EE0FD1E4A15D2002B01FD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		278EE0FE1E4A15D2002B01FD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		278EE1001E4A15D2002B01FD /* SteerableOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SteerableOperation.swift; sourceTree = "<group>"; };
-		278EE1011E4A15D2002B01FD /* EffectiveSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectiveSwift.h; sourceTree = "<group>"; };
 		278EE1041E4A15D2002B01FD /* C+SE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "C+SE.swift"; sourceTree = "<group>"; };
 		278EE1061E4A15D2002B01FD /* Array+SE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+SE.swift"; sourceTree = "<group>"; };
 		278EE1071E4A15D2002B01FD /* Dictionary+SE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+SE.swift"; sourceTree = "<group>"; };
@@ -165,7 +164,6 @@
 				278EE0FC1E4A15D2002B01FD /* AppGenerate */,
 				278EE0FF1E4A15D2002B01FD /* Classes */,
 				278EE1021E4A15D2002B01FD /* Extension */,
-				278EE1011E4A15D2002B01FD /* EffectiveSwift.h */,
 				278EE0D21E4A1546002B01FD /* Main.storyboard */,
 				278EE0D51E4A1546002B01FD /* Assets.xcassets */,
 				278EE0D71E4A1546002B01FD /* LaunchScreen.storyboard */,
