@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SteerableOperation: Operation {
+open class SteerableOperation: Operation {
     private var isFinishValue: Bool = false
     private var isExecutingValue: Bool = false
     override public var isFinished: Bool {
