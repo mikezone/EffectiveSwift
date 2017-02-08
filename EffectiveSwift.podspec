@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "EffectiveSwift"
-  s.version      = "1.0.2"
-  s.summary      = "some useful extension for Swift"
+  s.version      = "1.0.4"
+  s.summary      = "Some useful extension for Swift"
   s.homepage     = "https://github.com/mikezone/EffectiveSwift"
   s.license      = "GNU"
   s.author       = { "Mike" => "82643885@qq.com" }

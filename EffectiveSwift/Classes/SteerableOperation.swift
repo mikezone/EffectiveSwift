@@ -11,7 +11,7 @@ import Foundation
 open class SteerableOperation: Operation {
     private var isFinishValue: Bool = false
     private var isExecutingValue: Bool = false
-    override public var isFinished: Bool {
+    override open var isFinished: Bool {
         get {
             return isFinishValue
         }
@@ -21,7 +21,7 @@ open class SteerableOperation: Operation {
             self.didChangeValue(forKey: "isFinished")
         }
     }
-    override public var isExecuting: Bool {
+    override open var isExecuting: Bool {
         get {
             return isExecutingValue
         }
