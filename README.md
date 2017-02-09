@@ -22,13 +22,14 @@ If you want to use the latest features of `EffectiveSwift` use normal external s
 ```ruby
 pod 'EffectiveSwift', :git => 'https://github.com/mikezone/EffectiveSwift.git'
 ```
+
+This pulls from the `master` branch directly.
+
 Take care that Swift project must add:
 
 ```ruby
 use_frameworks!
 ```
-
-This pulls from the `master` branch directly.
 
 Second, install `EffectiveSwift` into your project:
 
