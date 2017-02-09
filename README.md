@@ -53,7 +53,7 @@ pod install
 "abcde".substring(0..<3) // "abc"
 ```
 ### Attention
-use this framework like other Swift Module, you must add this line at top of your files:
+Use this framework like other Swift Module, you must add this line at top of your files:
 
 ```swift
 import EffectiveSwift
