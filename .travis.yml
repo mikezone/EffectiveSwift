@@ -2,6 +2,3 @@ language: objective-c
 osx_image: xcode8
 xcode_project: EffectiveSwift.xcodeproj
 xcode_scheme: EffectiveSwift
-
-script:
-- xctool -project EffectiveSwift.xcodeproj -scheme EffectiveSwift build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
