@@ -47,7 +47,7 @@ pod install
 
 (run this Xcode project. There are some sample in `AppGenerate/ViewController`)
 
-**Get a substring of String type
+**Get a substring of String type**
 
 ```swift
 "abcde".substring(0..<3) // "abc"
