@@ -525,7 +525,7 @@ public extension String {
     
 }
 
-// MARK: - compatable for C library
+// MARK: - compatable for C String
 
 public extension String {
     public var mutableCCharPointer: UnsafeMutablePointer<Int8> {
