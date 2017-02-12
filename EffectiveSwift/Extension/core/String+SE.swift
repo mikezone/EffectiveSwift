@@ -524,3 +524,32 @@ public extension String {
     }
     
 }
+
+// MARK: - compatable for C library
+
+public extension String {
+    public var mutableCCharPointer: UnsafeMutablePointer<Int8> {
+        let length = self.lengthOfBytes(using: .utf8)
+        let result = UnsafeMutablePointer<Int8>.allocate(capacity: length)
+        if let bytes = self.cString(using: .utf8) {
+            for i in 0..<length {
+                result[i] = bytes[i]
+            }
+        }
+        return result
+    }
+    
+    public var cCharPointer: UnsafePointer<Int8> {
+        return UnsafePointer<Int8>(mutableCCharPointer)
+    }
+    
+    public init(cCharArray: [Int8]) {
+        let length = cCharArray.count
+        let pointer = UnsafeMutablePointer<Int8>.allocate(capacity: length)
+        for i in 0..<length {
+            pointer[i] = cCharArray[i]
+        }
+        self.init(cString: pointer)
+    }
+    
+}

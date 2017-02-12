@@ -28,7 +28,25 @@ public extension Int {
     }
 }
 
+public extension Int8 {
+    public init?(cCharString: String) {
+        guard let cString = cCharString.cString(using: .utf8),
+            cString.count == 2 else { // end with "\0"
+                return nil
+        }
+        self.init(cString[0])
+    }
+}
+
 public extension UInt8 {
+    public init?(cCharString: String) {
+        guard let cString = cCharString.cString(using: .utf8),
+        cString.count == 2 else {
+            return nil
+        }
+        self.init(cString[0])
+    }
+    
     public func isEqualTo(char: String) -> Bool {
         guard let scalar = char.unicodeScalars.first else { return false}
         return isEqualTo(ascii: scalar)

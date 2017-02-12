@@ -84,5 +84,13 @@ class ViewController: UIViewController {
 //            
 //        }
         print(Double.random(range: 1.0..<1.9, precision: -4))
+        
+        print(String(cString: "hello".cCharPointer))
+        let h = Int8(cCharString: "h")!
+        let e = Int8(cCharString: "e")!
+        let l = Int8(cCharString: "l")!
+        let o = Int8(cCharString: "o")!
+        let cCharArray = [h, e, l, l, o]
+        print(String(cCharArray: cCharArray))
     }
 }
