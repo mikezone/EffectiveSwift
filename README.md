@@ -3,6 +3,7 @@
 [![License GPL-3.0](https://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat)](https://raw.githubusercontent.com/mikezone/EffectiveSwift/master/LICENSE)&nbsp;
 [![CocoaPods](https://img.shields.io/cocoapods/v/EffectiveSwift.svg?style=flat)](http://cocoapods.org/?q=EffectiveSwift)&nbsp;
 [![Support](https://img.shields.io/badge/support-iOS%208%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
+![Platform](https://img.shields.io/badge/platform-ios-ff69b4.svg)&nbsp;
 [![Build Status](https://travis-ci.org/mikezone/EffectiveSwift.svg?branch=master)](https://travis-ci.org/mikezone/EffectiveSwift)
 
 `EffectiveSwift` is a framework that makes you work more efficiently with Swift. It contains some extensions for Classes in iOS framework and some classes derived them or wrapped for them.
