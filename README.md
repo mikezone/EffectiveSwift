@@ -76,14 +76,14 @@ let cCharArray = [h, e, l, l, o]
 String(cCharArray: cCharArray) // "hello"
 
 // some samples of Extension for `Int`
-print(UInt8(97).isEqualTo(char: "a")) // true
-print(UInt32(0xff10b2c3).uInt8Components) // [0xff, 0x10, 0xb2, 0xc3]
-print(Int8(cCharString: "A")!) // 65
+UInt8(97).isEqualTo(char: "a") // true
+UInt32(0xff10b2c3).uInt8Components // [0xff, 0x10, 0xb2, 0xc3]
+Int8(cCharString: "A") // 65
 let a: UInt32 = 0x41424345
-print(a.isEqualTo(chars: "ABCE")) // true
+a.isEqualTo(chars: "ABCE") // true
 
 // some samples of Extension for `Double`
-print(Double.random(range: 1.0..<1.9, precision: -4))
+Double.random(range: 1.0..<1.9, precision: -4)
 
 // some samples of Extension for `DispatchQueue`
 DispatchQueue(label: "com.github.mike").isMainQueue // true
