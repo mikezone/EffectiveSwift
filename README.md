@@ -57,23 +57,23 @@ pod install
 
 ```swift
 // some samples of Extension for `String`
-print("hello".md5String) // 5d41402abc4b2a76b9719d911017c592
-print("abcde".substring(0..<3)) // "abc"
-print("url?serch=汉字".URLEncodedString!) // "url%3Fserch%3D%E6%B1%89%E5%AD%97"
-print("<a>超链接</a>".escapedHTMLString!) // "&quot;a&quot;超链接&quot;/a&quot;"
+"hello".md5String // 5d41402abc4b2a76b9719d911017c592
+"abcde".substring(0..<3) // "abc"
+"url?serch=汉字".URLEncodedString // "url%3Fserch%3D%E6%B1%89%E5%AD%97"
+"<a>超链接</a>".escapedHTMLString // "&quot;a&quot;超链接&quot;/a&quot;"
 
-print("http://wwww.baidu.com".isHTTPURL()) // true
-print("http://wwww.baidu.com".entiretyMatchesRegex("^http(s)?:\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- .\\/?%&=]*)?$")) // true
-print("😀😂".containsEmoji()) // true
-print("  content  ".trimming()) // "content"
+"http://wwww.baidu.com".isHTTPURL() // true
+"http://wwww.baidu.com".entiretyMatchesRegex("^http(s)?:\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- .\\/?%&=]*)?$") // true
+"😀😂".containsEmoji() // true
+"  content  ".trimming() // "content"
 
-print(String(cString: "hello".cCharPointer))
+String(cString: "hello".cCharPointer) // "hello"
 let h = Int8(cCharString: "h")!
 let e = Int8(cCharString: "e")!
 let l = Int8(cCharString: "l")!
 let o = Int8(cCharString: "o")!
 let cCharArray = [h, e, l, l, o]
-print(String(cCharArray: cCharArray))
+String(cCharArray: cCharArray) // "hello"
 
 // some samples of Extension for `Int`
 print(UInt8(97).isEqualTo(char: "a")) // true
@@ -86,14 +86,14 @@ print(a.isEqualTo(chars: "ABCE")) // true
 print(Double.random(range: 1.0..<1.9, precision: -4))
 
 // some samples of Extension for `DispatchQueue`
-print(DispatchQueue(label: "com.github.mike").isMainQueue) // true
+DispatchQueue(label: "com.github.mike").isMainQueue // true
 DispatchQueue.asyncOnMainQueue {
     // async execute code... in main queue
 }
 
 // some samples of Extension for `Date`
-print(Date().subtractingDays(1).isYesterday) // true
-print(Date.date("20170212", format: "yyyyMMdd")!.isSameWeekInChina(Date.date("20170213", format: "yyyyMMdd")!)) // false
+Date().subtractingDays(1).isYesterday // true
+Date.date("20170212", format: "yyyyMMdd")!.isSameWeekInChina(Date.date("20170213", format: "yyyyMMdd")!) // false
 
 // some samples of Extension for `Timer`
 _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, closure: {_ in
@@ -106,13 +106,13 @@ attributedString.setFont(UIFont())
 attributedString.setStrokeColor(UIColor.red)
 
 // some samples of Extension for `UIApplication`
-print(UIApplication.shared.documentsPath!)
-print(UIApplication.shared.appBundleID!) // com.github.mikezone
-print(UIApplication.shared.appVersion!) // 1.0
+UIApplication.shared.documentsPath
+UIApplication.shared.appBundleID // com.github.mikezone
+UIApplication.shared.appVersion // 1.0
 
 // some samples of Extension for `UIColor`
-print(UIColor.lightText.alphaHexString) // 99ffffff
-// UIColor(hexString: "333333")
+UIColor.lightText.alphaHexString // 99ffffff
+UIColor(hexString: "333333")
 
 // some samples of Extension for `UIControl`
 UIButton().addBlock({ (sender) in
@@ -120,12 +120,12 @@ UIButton().addBlock({ (sender) in
 }, for: .touchUpInside)
 
 // some samples of Extension for `UIDevice`
-print(UIDevice.current.isJailbroken) // false
-print(UIDevice.current.machineModelName!) // Simulator x64
+UIDevice.current.isJailbroken // false
+UIDevice.current.machineModelName // Simulator x64
 
 // some samples of Extension for `UIFont`
 let normalFont = UIFont.systemFont(ofSize: 12.0).normaling
-print((normalFont?.isBold)!) // false
+normalFont?.isBold // false
 
 // some samples of Extension for `UIGestureRecognizer`
 _ = UIPinchGestureRecognizer({ pinch in
