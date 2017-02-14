@@ -88,7 +88,7 @@ print(Double.random(range: 1.0..<1.9, precision: -4))
 // some samples of Extension for `DispatchQueue`
 print(DispatchQueue(label: "com.github.mike").isMainQueue) // true
 DispatchQueue.asyncOnMainQueue {
-// async execute code... in main queue
+    // async execute code... in main queue
 }
 
 // some samples of Extension for `Date`
@@ -97,7 +97,7 @@ print(Date.date("20170212", format: "yyyyMMdd")!.isSameWeekInChina(Date.date("20
 
 // some samples of Extension for `Timer`
 _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, closure: {_ in
-print("hello")
+    print("hello")
 })
 
 // some samples of Extension for `NSMutableAttributedString`
@@ -116,7 +116,7 @@ print(UIColor.lightText.alphaHexString) // 99ffffff
 
 // some samples of Extension for `UIControl`
 UIButton().addBlock({ (sender) in
-print((sender as! UIButton).currentTitle ?? "")
+    print((sender as! UIButton).currentTitle ?? "")
 }, for: .touchUpInside)
 
 // some samples of Extension for `UIDevice`
@@ -129,9 +129,9 @@ print((normalFont?.isBold)!) // false
 
 // some samples of Extension for `UIGestureRecognizer`
 _ = UIPinchGestureRecognizer({ pinch in
-if pinch.state == .began {
+    if pinch.state == .began {
 
-}
+    }
 })
 
 // some samples of Extension for `UIImage`
