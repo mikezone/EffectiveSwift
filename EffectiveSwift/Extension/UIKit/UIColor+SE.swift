@@ -75,16 +75,21 @@ public extension UIColor {
     private func hex(_ containsAlpha: Bool = false) -> UInt32 {
         let cgColor = self.cgColor
         let count = cgColor.numberOfComponents
-        guard let components = cgColor.components,
-            count == 4 else { return 0x00}
-        let rHex = UInt32(components[0] * 255.0) << 16
-        let gHex = UInt32(components[1] * 255.0) << 8
-        let bHex = UInt32(components[2] * 255.0)
-        if !containsAlpha {
-            return rHex + gHex + bHex
+        guard count == 4 || count == 2 else { return 0x00000000}
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        if self.getRed(&r, green: &g, blue: &b, alpha: nil) {
+            let rHex = UInt32(r * 255.0) << 16
+            let gHex = UInt32(g * 255.0) << 8
+            let bHex = UInt32(b * 255.0)
+            if !containsAlpha {
+                return rHex + gHex + bHex
+            }
+            let alphaHex = UInt32(cgColor.alpha * 255.0) << 24
+            return alphaHex + rHex + gHex + bHex
         }
-        let alphaHex = UInt32(self.alpha * 255.0) << 24
-        return alphaHex + rHex + gHex + bHex
+        return 0x00000000
     }
     
     public var hexValue: UInt32 {

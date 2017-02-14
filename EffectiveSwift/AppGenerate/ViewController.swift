@@ -14,76 +14,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let string = "ℹ↔↕↖↗↘↙↩↪我是🚾🚿🛀🛁🛂🛃🛄🛅"
+        // some samples of Extension for `String`
+        print("hello".md5String) // 5d41402abc4b2a76b9719d911017c592
+        print("abcde".substring(0..<3)) // "abc"
+        print("url?serch=汉字".URLEncodedString!) // "url%3Fserch%3D%E6%B1%89%E5%AD%97"
+        print("<a>超链接</a>".escapedHTMLString!) // "&quot;a&quot;超链接&quot;/a&quot;"
         
-        for ch in string.characters.enumerated() {
-            print(ch)
-        }
-        
-        for scalar in string.unicodeScalars.enumerated() {
-            print(scalar)
-            print(scalar.element.value)
-        }
-        
-        self.view.backgroundColor = UIColor(hex: 0x567834)
-//        print(self.view.backgroundColor?.alphaHexValue)
-//        print(self.view.backgroundColor?.alphaHexString)
-//        Timer(timeInterval: <#T##TimeInterval#>, repeats: <#T##Bool#>, block: <#T##(Timer) -> Void#>)
-//        Timer(fire: <#T##Date#>, interval: <#T##TimeInterval#>, repeats: <#T##Bool#>, block: <#T##(Timer) -> Void#>)
-//        Slic
-        
-//        print(UIApplication.shared.documentsPath)
-        
-//        let a: UInt32 = 0x41424345
-//        print(a.isEqualTo(chars: "ABCE"))
-//        print(a.uInt8Components)
-//        
-//        let b: UInt8 = 0x47
-//        print(b.isEqualTo(char: "G"))
-        
-//        let image = #imageLiteral(resourceName: "c").blurDark
-//        self.imageView.image = image
-//        print(UInt8.max)
-        
-//        let a = ClassIvarInfo()
-//        print(a)
-        print(UInt8(65).charString)
-        
-        // bug
-//        print(ClassInfo(ViewController.self as! AnyClass).propertyInfos)
-//        print(ClassInfo(Date.self as! AnyClass).ivarInfos)
-//        print(ClassInfo(Date.self as! AnyClass).methodInfos)
-//        
-//        let timer = Timer.timer(timeInterval: 1, repeats: true, closure: { timer in
-//            print("hello")
-//        })
-//        timer.fire()
-//        RunLoop.current.add(timer, forMode: .commonModes)
-//        
-//        
-//        _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, closure: { timer in
-//            print("world")
-//        })
-        
-//        do {
-////            let json = "{\"name\":\"zhangsan\", \"age\":12}"
-////            let json = "{\"name\":\"zhangsan\", \"age\":12.0}"
-////            let json = "{\"name\":\"zhangsan\", \"age\":{\"name\":\"zhangsan\", \"age\":12.0}}"
-//            let json = "{\"name\":\"zhangsan\", \"age\":[10, 8, 7]}"
-////            let json = "{\"name\":\"zhangsan\", \"age\":\"hah\"}"
-//            let obj = try JSONSerialization.jsonObject(with: json.data(using: .utf8)!, options: .mutableContainers)
-//            print(obj)
-//            let dict = obj as! [String:Any]
-//            print(dict)
-//            print(dict["name"] as! String) // zhangsan
-////            print(dict["age"] as! String) //Could not cast value of type '__NSCFNumber' (0x109f1e3c0) to 'NSString' (0x109522ad8)
-//            print(dict["age"] as? String) // nil
-////            print(dict["age"] as! Int) // 12
-//            print(String.fromAnyJSONObject(dict["age"]))
-//        } catch {
-//            
-//        }
-        print(Double.random(range: 1.0..<1.9, precision: -4))
+        print("http://wwww.baidu.com".isHTTPURL()) // true
+        print("http://wwww.baidu.com".entiretyMatchesRegex("^http(s)?:\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- .\\/?%&=]*)?$")) // true
+        print("😀😂".containsEmoji()) // true
+        print("  content  ".trimming()) // "content"
         
         print(String(cString: "hello".cCharPointer))
         let h = Int8(cCharString: "h")!
@@ -92,5 +32,74 @@ class ViewController: UIViewController {
         let o = Int8(cCharString: "o")!
         let cCharArray = [h, e, l, l, o]
         print(String(cCharArray: cCharArray))
+        
+        // some samples of Extension for `Int`
+        print(UInt8(97).isEqualTo(char: "a")) // true
+        print(UInt32(0xff10b2c3).uInt8Components) // [0xff, 0x10, 0xb2, 0xc3]
+        print(Int8(cCharString: "A")!) // 65
+        let a: UInt32 = 0x41424345
+        print(a.isEqualTo(chars: "ABCE")) // true
+        
+        // some samples of Extension for `Double`
+        print(Double.random(range: 1.0..<1.9, precision: -4))
+        
+        // some samples of Extension for `DispatchQueue`
+        print(DispatchQueue(label: "com.github.mike").isMainQueue) // true
+        DispatchQueue.asyncOnMainQueue {
+            // async execute code... in main queue
+        }
+        
+        // some samples of Extension for `Date`
+        print(Date().subtractingDays(1).isYesterday) // true
+        print(Date.date("20170212", format: "yyyyMMdd")!.isSameWeekInChina(Date.date("20170213", format: "yyyyMMdd")!)) // false
+        
+        // some samples of Extension for `Timer`
+        _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, closure: {_ in
+            print("hello")
+        })
+        
+        // some samples of Extension for `NSMutableAttributedString`
+        let attributedString = NSMutableAttributedString()
+        attributedString.setFont(UIFont())
+        attributedString.setStrokeColor(UIColor.red)
+        
+        // some samples of Extension for `UIApplication`
+        print(UIApplication.shared.documentsPath!)
+        print(UIApplication.shared.appBundleID!) // com.github.mikezone
+        print(UIApplication.shared.appVersion!) // 1.0
+        
+        // some samples of Extension for `UIColor`
+        print(UIColor.lightText.alphaHexString) // 99ffffff
+        // UIColor(hexString: "333333")
+        
+        // some samples of Extension for `UIControl`
+        UIButton().addBlock({ (sender) in
+            print((sender as! UIButton).currentTitle ?? "")
+        }, for: .touchUpInside)
+        
+        // some samples of Extension for `UIDevice`
+        print(UIDevice.current.isJailbroken) // false
+        print(UIDevice.current.machineModelName!) // Simulator x64
+        
+        // some samples of Extension for `UIFont`
+        let normalFont = UIFont.systemFont(ofSize: 12.0).normaling
+        print((normalFont?.isBold)!) // false
+        
+        // some samples of Extension for `UIGestureRecognizer`
+        _ = UIPinchGestureRecognizer({ pinch in
+            if pinch.state == .began {
+                
+            }
+        })
+        
+        // some samples of Extension for `UIImage`
+        let image = UIImage(named: "xxx")
+        _ = image?.resizing(size: CGSize(width: 100, height: 150))
+        _ = image?.tinting(color: UIColor.red)
+        _ = image?.rotatingLeft90
+        
+        // existing bug
+        // print(ClassInfo(ViewController.self as! AnyClass).propertyInfos)
+        
     }
 }
