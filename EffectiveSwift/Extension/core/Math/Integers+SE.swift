@@ -36,6 +36,18 @@ public extension Int8 {
         }
         self.init(cString[0])
     }
+    
+    public var charString: String? {
+        if self < 0 {
+            return nil
+        }
+        let pointer = UnsafeMutablePointer<Int8>.allocate(capacity: 1)
+        let value = self
+        pointer.pointee = value
+        let string = String(cString: pointer)
+        free(pointer)
+        return string
+    }
 }
 
 public extension UInt8 {
