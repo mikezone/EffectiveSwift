@@ -2,3 +2,4 @@ language: objective-c
 osx_image: xcode8
 xcode_project: EffectiveSwift.xcodeproj
 xcode_scheme: EffectiveSwift
+xcode_sdk: iphonesimulator
