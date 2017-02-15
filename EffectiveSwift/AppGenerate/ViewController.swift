@@ -101,5 +101,7 @@ class ViewController: UIViewController {
         // existing bug
         // print(ClassInfo(ViewController.self as! AnyClass).propertyInfos)
         
+//        print("hello".characters.count) // 5
+//        print("hello".cString(using: .utf8)?.count) // 6
     }
 }
