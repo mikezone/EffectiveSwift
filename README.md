@@ -86,7 +86,7 @@ a.isEqualTo(chars: "ABCE") // true
 Double.random(range: 1.0..<1.9, precision: -4)
 
 // some samples of Extension for `DispatchQueue`
-DispatchQueue(label: "com.github.mike").isMainQueue // true
+DispatchQueue(label: "com.github.mikezone").isMainQueue // true
 DispatchQueue.asyncOnMainQueue {
     // async execute code... in main queue
 }
