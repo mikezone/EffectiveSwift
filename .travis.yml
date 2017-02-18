@@ -5,4 +5,4 @@ xcode_scheme: EffectiveSwift
 xcode_sdk: iphonesimulator
 
 script:
-- xctool -project EffectiveSwift.xcodeproj -scheme 'EffectiveSwift' -configuration Debug -sdk iphonesimulator -arch i386 build
+xcodebuild -scheme 'EffectiveSwift' -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.1'
