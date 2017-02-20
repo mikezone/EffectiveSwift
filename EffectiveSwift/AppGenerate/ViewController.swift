@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         
         // some samples of Extension for `Timer`
         _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, closure: {_ in
-            print("hello")
+//            print("hello")
         })
         
         // some samples of Extension for `NSMutableAttributedString`
@@ -72,11 +72,6 @@ class ViewController: UIViewController {
         print(UIColor.lightText.alphaHexString) // 99ffffff
         // UIColor(hexString: "333333")
         
-        // some samples of Extension for `UIControl`
-        UIButton().addBlock({ (sender) in
-            print((sender as! UIButton).currentTitle ?? "")
-        }, for: .touchUpInside)
-        
         // some samples of Extension for `UIDevice`
         print(UIDevice.current.isJailbroken) // false
         print(UIDevice.current.machineModelName!) // Simulator x64
@@ -85,15 +80,24 @@ class ViewController: UIViewController {
         let normalFont = UIFont.systemFont(ofSize: 12.0).normaling
         print((normalFont?.isBold)!) // false
         
-        // some samples of Extension for `UIGestureRecognizer`
-        _ = UIPinchGestureRecognizer(actionBlock: { pinch in
-            if pinch.state == .began {
-                
+        // some samples of Extension for `UIControl` and `UIGestureRecognizer`
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        button.backgroundColor = UIColor.groupTableViewBackground
+        self.view.addSubview(button)
+        button.addBlock({ (sender) in
+            print("clicked on button")
+        }, for: .touchUpInside)
+        
+        self.view.addGestureRecognizer(UIPinchGestureRecognizer(actionBlock: { pinch in
+            if pinch.state == .ended {
+                button.removeAllTargets()
             }
-        })
+        }))
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(actionBlock: { (tap) in
             self.view.endEditing(true)
+            print("did tap on self.view")
+            print(button.allTargets)
         }))
         
         // some samples of Extension for `UIImage`

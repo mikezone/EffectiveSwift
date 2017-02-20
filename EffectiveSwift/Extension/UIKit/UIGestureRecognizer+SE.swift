@@ -11,6 +11,7 @@ import UIKit
 fileprivate var block_key: Int8 = 0
 
 public extension UIGestureRecognizer {
+    
     public convenience init(actionBlock: @escaping (UIGestureRecognizer) -> Swift.Void) {
         self.init()
         self.addActionBlock(actionBlock)
@@ -19,16 +20,14 @@ public extension UIGestureRecognizer {
     public func addActionBlock(_ actionBlock: @escaping (UIGestureRecognizer) -> Swift.Void) {
         let target = _UIGestureRecognizerBlockTarget(block: actionBlock)
         self.addTarget(target, action: #selector(_UIGestureRecognizerBlockTarget.invoke(sender:)))
-        var targets = self._allUIGestureRecognizerBlockTargets
-        targets.append(target)
+        self._allUIGestureRecognizerBlockTargets.append(target)
     }
     
     public func removeAllActionBlocks() {
-        var targets = self._allUIGestureRecognizerBlockTargets
-        for target in targets {
+        for target in self._allUIGestureRecognizerBlockTargets {
             self.removeTarget(target, action:  #selector(_UIGestureRecognizerBlockTarget.invoke(sender:)))
         }
-        targets.removeAll()
+        self._allUIGestureRecognizerBlockTargets.removeAll()
     }
     
     private var _allUIGestureRecognizerBlockTargets: [_UIGestureRecognizerBlockTarget] {

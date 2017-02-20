@@ -375,8 +375,9 @@
 				TargetAttributes = {
 					278EE0CA1E4A1546002B01FD = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = RK3MC6K463;
 						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					278EE0DE1E4A1546002B01FD = {
 						CreatedOnToolsVersion = 8.1;
@@ -626,11 +627,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = RK3MC6K463;
 				INFOPLIST_FILE = EffectiveSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.mikezone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyhuyu.mikezone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fa754f52-2b02-4c0f-a9e1-28235e783498";
+				PROVISIONING_PROFILE_SPECIFIER = dyhuyu;
 				SWIFT_INCLUDE_PATHS = "";
 				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/modulemapFiles/iphoneos";
 				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/modulemapFiles/iphonesimulator";
@@ -646,10 +650,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EffectiveSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.mikezone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyhuyu.mikezone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "";
 				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/modulemapFiles/iphoneos";

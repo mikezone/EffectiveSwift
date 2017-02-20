@@ -13,10 +13,10 @@ fileprivate var block_key: Int8 = 0
 public extension UIControl {
     
     public func removeAllTargets() {
-        for target in self.allTargets.enumerated() {
+        for target in self.allTargets {
             self.removeTarget(target, action: nil, for: .allEvents)
         }
-        self._allUIControlBlockTargets.removeAll()
+        _allUIControlBlockTargets.removeAll()
     }
     
     public func setTarget(_ target: Any?, action: Selector, for controlEvents: UIControlEvents) {
@@ -64,6 +64,7 @@ public extension UIControl {
                 targets.remove(at: targets.index(of: willRemove)!)
             }
         }
+        self._allUIControlBlockTargets = targets
     }
     
     private var _allUIControlBlockTargets: [_UIControlBlockTarget] {
