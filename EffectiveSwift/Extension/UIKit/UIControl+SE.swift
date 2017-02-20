@@ -8,7 +8,7 @@
 
 import UIKit
 
-fileprivate var block_key: Int = 0
+fileprivate var block_key: Int8 = 0
 
 public extension UIControl {
     

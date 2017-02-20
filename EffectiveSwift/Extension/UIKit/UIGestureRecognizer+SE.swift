@@ -8,10 +8,10 @@
 
 import UIKit
 
-fileprivate var block_key: Int = 0
+fileprivate var block_key: Int8 = 0
 
 public extension UIGestureRecognizer {
-    public convenience init(_ actionBlock: @escaping (UIGestureRecognizer) -> Swift.Void) {
+    public convenience init(actionBlock: @escaping (UIGestureRecognizer) -> Swift.Void) {
         self.init()
         self.addActionBlock(actionBlock)
     }

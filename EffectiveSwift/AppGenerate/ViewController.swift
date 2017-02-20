@@ -86,11 +86,15 @@ class ViewController: UIViewController {
         print((normalFont?.isBold)!) // false
         
         // some samples of Extension for `UIGestureRecognizer`
-        _ = UIPinchGestureRecognizer({ pinch in
+        _ = UIPinchGestureRecognizer(actionBlock: { pinch in
             if pinch.state == .began {
                 
             }
         })
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(actionBlock: { (tap) in
+            self.view.endEditing(true)
+        }))
         
         // some samples of Extension for `UIImage`
         let image = UIImage(named: "xxx")
