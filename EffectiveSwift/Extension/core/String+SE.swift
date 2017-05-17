@@ -490,7 +490,7 @@ public extension String {
     public static func uuidString() -> String {
         let uuid = CFUUIDCreate(nil)
         let cfString = CFUUIDCreateString(nil, uuid)
-        return cfString as! String
+        return (cfString as String?) ?? ""
     }
     
     public func trimming() -> String {

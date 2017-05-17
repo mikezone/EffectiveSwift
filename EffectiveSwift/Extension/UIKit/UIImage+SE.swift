@@ -11,7 +11,7 @@ import ImageIO
 import Accelerate
 
 public func degreesToRadians(_ degrees: CGFloat) -> CGFloat {
-    return degrees * CGFloat(M_PI) / 180.0;
+    return degrees * CGFloat(Double.pi) / 180.0;
 }
 
 public extension UIImage {
@@ -318,8 +318,8 @@ public extension UIImage {
             return nil
         }
         
-        let hasBlur = radius > CGFloat(FLT_EPSILON)
-        let hasSaturation = fabs(saturation - 1.0) > CGFloat(FLT_EPSILON)
+        let hasBlur = radius > CGFloat(Float.ulpOfOne)
+        let hasSaturation = fabs(saturation - 1.0) > CGFloat(Float.ulpOfOne)
         
         let size = self.size
         let rect = CGRect(origin: .zero, size: size)
@@ -365,8 +365,8 @@ public extension UIImage {
             // ... if d is odd, use three box-blurs of size 'd', centered on the output pixel.
             //
             var inputRadius = radius * scale;
-            if inputRadius - 2.0 < CGFloat(FLT_EPSILON) {inputRadius = 2.0}
-            var radiusValue = floor((inputRadius * 3.0 * CGFloat(sqrt(2.0 * M_PI)) / 4 + 0.5) / 2)
+            if inputRadius - 2.0 < CGFloat(Float.ulpOfOne) {inputRadius = 2.0}
+            var radiusValue = floor((inputRadius * 3.0 * CGFloat(sqrt(2.0 * Double.pi)) / 4 + 0.5) / 2)
             if radiusValue.truncatingRemainder(dividingBy: 2.0) != 1.0 {
                 radiusValue += 1.0 // force radius to be odd so that the three box-blur methodology works.
             }
@@ -421,7 +421,7 @@ public extension UIImage {
     }
     
     public func merging(effectCGImage: CGImage, tintColor: UIColor?, tintBlendMode: CGBlendMode, maskImage: UIImage?, opaque: Bool) -> UIImage? {
-        let hasTint = tintColor != nil && tintColor!.cgColor.alpha > CGFloat(FLT_EPSILON)
+        let hasTint = tintColor != nil && tintColor!.cgColor.alpha > CGFloat(Float.ulpOfOne)
         let hasMask = maskImage != nil
         let size = self.size
         let rect = CGRect(origin: .zero, size: size)
@@ -468,7 +468,9 @@ public extension CGImageSource {
     public func frameDurationAtIndex(_ index: Int) -> TimeInterval {
         let cfFrameProperties = CGImageSourceCopyPropertiesAtIndex(self, index, nil)
         
-        let frameProperties = cfFrameProperties as! NSDictionary;
+        guard let frameProperties = cfFrameProperties as NSDictionary? else {
+            return 0
+        }
         let gifProperties = frameProperties[kCGImagePropertyGIFDictionary] as! NSDictionary
         var frameDuration: TimeInterval = 0.1
         let delayTimeUnclampedProp = gifProperties[kCGImagePropertyGIFUnclampedDelayTime] as? NSNumber
