@@ -264,11 +264,11 @@ public extension String {
     /// - parameter constrainedToSize: constrainedToSize
     /// - returns: 计算好的size
     func size(font: UIFont, limitedSize: CGSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), lineBreakMode: NSLineBreakMode = .byWordWrapping) -> CGSize {
-        var attributes: [String : Any] = [NSFontAttributeName: font]
+        var attributes: [NSAttributedStringKey : Any] = [NSAttributedStringKey.font: font]
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = lineBreakMode
-        attributes[NSParagraphStyleAttributeName] = paragraphStyle
+        attributes[NSAttributedStringKey.paragraphStyle] = paragraphStyle
         
         let options: NSStringDrawingOptions = [.usesLineFragmentOrigin, .usesFontLeading]
         return self.boundingRect(with: limitedSize, options: options, attributes: attributes, context: nil).size

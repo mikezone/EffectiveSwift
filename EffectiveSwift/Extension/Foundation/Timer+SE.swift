@@ -10,7 +10,7 @@ import Foundation
 
 public extension Timer {
     
-    public class func _execBlock(timer: Timer) {
+    @objc public class func _execBlock(timer: Timer) {
         if let closure = timer.userInfo as? ((_ timer: Timer) -> Swift.Void) {
             closure(timer)
         }

@@ -26,9 +26,9 @@ public extension UIFont {
     }
     
     public var fontWeight: CGFloat? {
-        guard let traits = self.fontDescriptor.object(forKey: UIFontDescriptorTraitsAttribute) as? [String : Any]
+        guard let traits = self.fontDescriptor.object(forKey: UIFontDescriptor.AttributeName.traits) as? [String : Any]
             else { return nil}
-        return traits[UIFontWeightTrait] as? CGFloat
+        return traits[UIFontDescriptor.TraitKey.weight.rawValue] as? CGFloat
     }
     
     public var bolding: UIFont? {
