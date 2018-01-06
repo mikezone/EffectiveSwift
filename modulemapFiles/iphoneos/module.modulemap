@@ -2,8 +2,9 @@ module CommonCrypto [system] [extern_c] {
     header "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/CommonCrypto/CommonCrypto.h"
     export *
 }
+//
+//module zlib [system] [extern_c] {
+//header "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/zlib.h"
+//export *
+//}
 
-module zlib [system] [extern_c] {
-header "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/zlib.h"
-export *
-}
