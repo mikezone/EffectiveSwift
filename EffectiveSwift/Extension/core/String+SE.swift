@@ -441,19 +441,22 @@ public extension String {
         let startIndex = self.index(self.startIndex, offsetBy: range.startIndex)
         let endIndex = self.index(self.startIndex, offsetBy: range.endIndex)
         let range = Range(uncheckedBounds: (lower: startIndex, upper: endIndex))
-        return self.substring(with: range)
+//        return self.substring(with: range)
+        return String(self[range])
     }
     
     public func substring(to: Int) -> String? {
         if to >= self.characters.count || to < 0 { return nil }
         let index = self.index(self.startIndex, offsetBy: to)
-        return self.substring(to: index)
+//        return self.substring(to: index)
+        return String(self[..<index])
     }
     
     public func substring(from: Int) -> String? {
         if from >= self.characters.count || from < 0 { return nil }
         let index = self.index(self.startIndex, offsetBy: from)
-        return self.substring(from: index)
+//        return self.substring(from: index)
+        return String(self[index...])
     }
 }
 
